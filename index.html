@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Caesar Cipher</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div class="base">
+        <h1 id="title">Caesar Cipher</h1>
+        <div class="sub-base">
+            <div class="container">
+                <div class="input-form">
+                    <textarea id="text" placeholder="Enter Text" spellcheck="false"></textarea>
+                    <div class="key-options">
+                        <input id="key" type="number" placeholder="Enter Key (1-25)" />
+                        <div class="options">
+                            <div id="erase">
+                                <img src="./images/eraser.png" alt="ERASE" />
+                                <p>ERASE</p>
+                            </div>
+                            <div id="scan">
+                                <img src="./images/scanner.png" alt="SCAN" />
+                                <p>SCAN</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="buttons">
+                    <button id="encrypt">ENCRYPT</button>
+                    <button id="decrypt">DECRYPT</button>
+                </div>
+            </div>
+          <div class="scan-container" style="display: none;">
+            <div class="scan-header">
+                <div class="scan-header-back">
+                    <img src="images/back.png" alt="">
+                    <p>Back</p>
+                </div>
+                <h1 id="scan-title">Scan Text</h1>
+            </div>
+              <div class="scan-option1">
+                <div class="scan-gallery">
+                    <img src="images/gallery.png">
+                    <p>Gallery</p>
+                </div>
+                <div class="scan-camera">
+                    <img src="images/camera.png">
+                    <p>Camera</p>
+                </div>
+              </div>
+              <div class="scan-option2">
+                <div class="scan-mic">
+                    <img src="images/microphone.png">
+                    <p>Microphone</p>
+                </div>
+                <div class="scan-file" id="fileButton">
+                    <img src="images/file.png">
+                    <p>Text File</p>
+                    <input type="file" id="fileInput" accept=".txt" style="display: none;">
+                </div>
+              </div>
+              <h6 id="scan-note">Note: Some features may not be available on other device and browser.</h6>
+          </div>
+        </div>
+        <div class="result-container" style="display: none;">
+            <h3 id="result-type"></h3>
+            <p id="result-text"></p>
+        </div>
+    </div>
+    <script src="CaesarCipher.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
